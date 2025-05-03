@@ -1,0 +1,343 @@
+/* ================== Base & Reset Styles ================== */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* ================== Body & Dark Mode ================== */
+body.dark-mode {
+    background-color: black;
+    color: white;
+
+}
+
+*.dark-mode{
+    color: white;
+}
+
+  
+body.dark-mode .card-container:hover .card {
+    transform: rotateY(0deg); /* Flip to front on hover */
+}
+
+*::selection{
+    background-color: orangered;
+    color: white;
+}
+/* ================== Header & Footer ================== */
+header{
+    
+    background-color: rgb(35, 35, 35);
+    color: white;
+
+    padding:  0 0 20px;
+    margin: 0%;
+    
+}
+.body2{
+    justify-content: center;
+    display: flex;
+}
+footer{
+    
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
+/* ================== Dark Mode Background ================== */
+.darkonly-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.2; /* optional: gives a nice subtle effect */
+}
+  
+body.dark-mode .darkonly-bg {
+    display: block;
+}
+/* ================== Navigation Bar ================== */
+.name{
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    
+    background-color: rgb(0, 0, 0);
+}
+.navediv{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+.text_div ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+}
+li{
+    list-style: none;     
+}
+li a{
+    color: white;
+}
+li a:hover{
+    color: red;
+}
+.logo{
+    text-align: right;
+    width: 5%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    
+}
+.logo{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sub{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+/* ================== Section Text Styles ================== */
+.pr{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.none{
+    color: rgb(35, 35, 35);
+}
+.skill{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    
+}
+/* ================== Button & Toggle Styles ================== */
+.dark{
+    aspect-ratio: 4/3;
+    max-width: 100%;
+    object-fit: cover;
+    
+}
+.b1
+{
+    padding: 1px 1px 1px;
+    background-color: black;
+    width: 48px;
+    height: 48px;
+    box-shadow: none;
+    display: flex;
+    border-radius: 20px;
+
+}
+.buttoncontainer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px 30px ;
+}
+.b1:hover{
+    background-color: rgb(234, 160, 22);
+    cursor: pointer;
+}
+/* ================== Card Styles & Flip Effects ================== */
+.card-container{
+    position: relative;
+    width: 200px;
+    height: 280px;
+    perspective: 1000px;
+    margin: 10px;
+}
+/* ================== Social & Contact Icons ================== */
+.yt{
+    object-fit: cover;
+    height: 20px;
+    width: 70px;
+}
+.whatspp{
+    aspect-ratio: 4/3;
+    height: 35px;
+    width: 35px;
+}
+/* ================== Email Hover ================== */
+.email{
+    color: white;
+}
+.email:hover{
+    color: tomato;
+    cursor: pointer;
+}
+/* ================== Footer Layout ================== */
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+   
+}
+/* ================== Image Styling ================== */
+.image{
+    margin-top: 40px;
+    perspective: 4/3;
+    height: 150px;
+    border-color: rgb(39, 42, 206);
+    border-style: solid;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    
+}
+.image2{
+    width: 60%;
+    height: 30%;
+    border-color: rgb(34, 77, 206);
+    border-style: solid;
+    border-radius: 60%;
+    object-fit: cover;
+}
+.card-button{
+    margin-top: 40px;
+    margin-left: -5px;
+    font-size: 25px;
+    background-color: rgb(57, 210, 131);
+    border-radius: 20px;
+    margin-top: 10px;
+    
+    
+}
+.card-button:hover{
+    background-color: rgb(10, 1, 1);
+    color: white;
+}
+.card_holder{
+    position: relative;
+    perspective: 1000px;
+}
+
+.card_holder.flip .card_warper {
+    transform: rotateY(180deg);
+}
+.card_front{
+    position: absolute;
+    backface-visibility: hidden;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-top: 45px;
+    background-color: rgb(7, 7, 6);
+    height: 400px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card_back{
+    position: absolute;
+    backface-visibility: hidden;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-top: 45px;
+    background-color: rgb(7, 7, 6);
+    height: 400px;
+    width: 250px;
+    color: white;
+    text-align: center;
+    
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card_back {
+    transform: rotateY(180deg);
+
+}
+/* ================== Card Text Content ================== */
+ .data1{
+    font-size: 25px;
+ }
+.data2{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.gap{
+    font-size: 8px;
+    color: transparent;
+}
+/* ================== Scrollable Card Container ================== */
+.card_container{
+    justify-content: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color:transparent;
+    width: 896px;
+    height: 500px;
+    display: flex;
+    gap: 150px;
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+    scroll-behavior: smooth;
+
+    
+}
+/* ================== Card Warper ================== */
+.card_warper{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    justify-content: center;
+    display: flex;
+    margin-left: 150px;
+    gap: 20px;
+    
+}
+.aps{
+    font-size: small;
+    color: transparent;
+}
+.tnext{
+    height: 70px;
+    width: 100px;
+    background-color: aqua;
+}
+.prev{
+    height: 70px;
+    width: 100px;
+    background-color: aqua;;
+}
+.tnext:hover{
+    background-color: red;
+    color: brown;
+}
+.prev:hover{
+    background-color: red;
+    color: brown;
+    
+}
+.scroll{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    
+}
+.fb
+{
+    aspect-ratio: 4/3;
+    width: 10%;
+}
+.FB{
+    color: white;
+}
