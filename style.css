@@ -10,7 +10,7 @@ body.dark-mode {
 
 }
 
-*.dark-mode{
+.dark-mode{
     color: white;
 }
 
@@ -273,25 +273,7 @@ li a:hover{
     font-size: 8px;
     color: transparent;
 }
-/* ================== Scrollable Card Container ================== */
-.card_container{
-    justify-content: center;
-    border-color: black;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    background-color:transparent;
-    width: 896px;
-    height: 500px;
-    display: flex;
-    gap: 150px;
-    justify-content: start;
-    flex-wrap: nowrap;
-    overflow-x:auto;
-    scroll-behavior: smooth;
 
-    
-}
 /* ================== Card Warper ================== */
 .card_warper{
     position: relative;
@@ -336,8 +318,64 @@ li a:hover{
 .fb
 {
     aspect-ratio: 4/3;
-    width: 10%;
+    width: 20%;
 }
 .FB{
     color: white;
+}
+/* ================== Scrollable Card Container ================== */
+.card_container{
+    
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color:transparent;
+    width: 896px;
+    height: 500px;
+    display: flex;
+    gap: 150px;
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+    scroll-behavior: smooth;
+
+    
+}
+@media(max-width:600px){
+    .card_container{
+        width: 300px;
+        height: 500px; 
+    }
+    .logo{
+        text-align: right;
+        width: 15%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+    .footer-flex{
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .pr{
+        font-size: 20px;
+    }
+    .About{
+        font-size: 10px;
+    }
+    .Contuct{
+        font-size: 10px;
+    }
+  
+    .text_div ul {
+        flex-direction: row;
+        gap: 10px;
+        padding-right: 20px;
+    }
+
 }
